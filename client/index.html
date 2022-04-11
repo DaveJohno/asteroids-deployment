@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/asteroids.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="./js/componants/asteroids/script.js" defer></script>
+    <script src="./js/componants/asteroids/asteroids.js" defer></script>
+
+    <title>asteroids</title>
+  </head>
+  <body>
+    <div class="not-logged-in">
+      <p>You are not currently logged in.</p>
+      <a href="/">Log in to play asteroids </a>
+    </div>
+    <div id="container" class="container">
+      <canvas id="my-canvas"></canvas>
+
+      <nav class="pause-menu" id="pauseMenu">
+        <ul>
+          <li class="menu-list" id="menuScore">
+            <button class="menu-score"></button>
+          </li>
+          <button class="reset-btn">Reset Game</button>
+          <li class="menu-list">
+            <button class="start-game">Start Game</button>
+          </li>
+          <li class="menu-list">
+            <button class="high-scores">Scoreboard</button>
+          </li>
+          <li class="menu-list"><button class="options">Options</button></li>
+          <li class="menu-list">
+            <a href="/">
+              <button class="back-to-main-menus">Main Menu</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="scoreboard" id="scoreboardMenu">
+        <ul class="options-list">
+          <li class="heading"><button>High Scores</button></li>
+        </ul>
+        <ul class="scoreboard-list" id="scorebordList"></ul>
+        <ul class="scoreboard-back">
+          <li class="menu-list">
+            <button class="back-to-pause-menu">Back</button>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="options-menu" id="optionsMenu">
+        <ul class="options-list">
+          <li class="heading"><button>Options</button></li>
+        </ul>
+        <ul class="options-menu-list">
+          <li class="options-list">
+            <button class="controls-btn">Controlls</button>
+          </li>
+          <li class="menu-list"><button>Audio</button></li>
+          <li class="menu-list">
+            <button class="options-back-btn">Back</button>
+          </li>
+        </ul>
+      </nav>
+      <nav class="controls" id="controlsMenu">
+        <ul class="options-list">
+          <li class="heading"><button>Controls</button></li>
+        </ul>
+        <ul class="contols-key-set">
+          <fieldset>
+            <label for="forward">Forward</label>
+            <input
+              class="foward-key"
+              type="text"
+              name="forward"
+              value=""
+              maxlength="1"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="left">left</label>
+            <input
+              class="left-key"
+              class=""
+              type="text"
+              name="left"
+              value=""
+              maxlength="1"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="right">Right</label>
+            <input
+              class="right-key"
+              type="text"
+              name="right"
+              value=""
+              maxlength="1"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="brake">Brake</label>
+            <input
+              class="brake-key"
+              type="text"
+              name="brake"
+              value=""
+              maxlength="1"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="fire">Fire</label>
+            <input
+              class="fire-key"
+              type="text"
+              name="fire"
+              value=""
+              maxlength="1"
+            />
+          </fieldset>
+
+          <fieldset>
+            <!-- <button class="save-controls-btn">Save</button>
+            <button class="default-controls-btn">Default</button> -->
+            <li class="menu-list">
+              <button class="controls-back-btn">Save</button>
+            </li>
+          </fieldset>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
