@@ -11,7 +11,6 @@ if (process.env.NODE_ENV === "production") {
 } else {
   db = new pg.Pool({
     database: "asteroids",
-    password: 'kkIbInn19786_ba!'
   });
 }
 module.exports = db;
